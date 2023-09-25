@@ -103,5 +103,6 @@ export const skillsData = [
   "Express",
   "Python",
   "Java",
+  "Framer Motion",
   "Flutter",
 ] as const;
