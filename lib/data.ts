@@ -3,7 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import tjuvgodsImg from "@/public/tjuvgods.jpg";
-import kwitterImg from "@/public/kwitter.jpg";
+import kwitterImg from "@/public/kwitter.png";
 import atomcollaborationImg from "@/public/atomcollaboration.jpg";
 
 export const links = [
