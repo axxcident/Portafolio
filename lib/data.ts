@@ -4,6 +4,8 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import tjuvgodsImg from "@/public/tjuvgods.jpg";
 import kwitterImg from "@/public/kwitter.png";
+import mjTrainingCampImg from "@/public/MJtraingingcamp.png";
+import gomokuGurusImg from "@/public/GomokuGurus.png";
 import atomcollaborationImg from "@/public/atomcollaboration.jpg";
 
 export const links = [
@@ -62,24 +64,38 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Tjuvgods",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+      "School project on a retail mockup store. I created backend and frontend functions, components & parts of design.",
+    tags: ["Vue.js", "Javascript", "Bootstrap", "Vuex", "Node.js"],
     imageUrl: tjuvgodsImg,
   },
   {
-    title: "rmtDev",
+    title: "Kwitter",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+      "School project on a mockup version of Twitter. I created pages, components, functions, the backend functionality & parts of the design.",
+    tags: ["React", "Javascript", "PostgreSQL", "Node.js"],
     imageUrl: kwitterImg,
   },
   {
-    title: "Word Analytics",
+    title: "Gomoku Gurus",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+      "School project on an online Gomoku game. I created pages, components, functions, the backend functionality & parts of the design.",
+    tags: ["React", "Javascript", "Firebase"],
+    imageUrl: gomokuGurusImg,
+  },
+  {
+    title: "MJ training camp",
+    description:
+      "Small project to customer who needed a travel & training static website",
+    tags: ["Vue.js", "Javascript"],
+    imageUrl: mjTrainingCampImg,
+  },
+  {
+    title: "Atom Collaboration",
+    description:
+      "Ongoing project with creating a website for a customer that delivers learning plattforms for organizations",
+    tags: ["Figma",],
     imageUrl: atomcollaborationImg,
   },
 ] as const;
