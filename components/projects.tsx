@@ -7,7 +7,7 @@ type ProjectProps = (typeof projectsData)[number];
 
 export default function Projects() {
   return (
-    <section>
+    <section id="projects" className="scroll-mt-[7.3rem]">
       <SectionHeading>My projects</SectionHeading>
       <div>
         {projectsData.map((project, index) => (
