@@ -9,7 +9,7 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 
-export default function intro() {
+export default function Intro() {
   const { setActiveState, setTimeOfLastClick } = useActiveSectionContext();
   const { ref } = useSectionInView("Home");
 
@@ -60,7 +60,7 @@ export default function intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Axel.</span> I'm a{" "}
+        <span className="font-bold">Hello, I&apos;m Axel.</span> I&apos;m a{" "}
         <span className="font-bold">frontend developer</span> that aspires to
         get some professional experience. I enjoy designing & building{" "}
         <span className="italic">sites & apps</span>. My focus is{" "}

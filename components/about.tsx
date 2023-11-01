@@ -37,11 +37,11 @@ const About = () => {
         developer.
       </p>
       <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I try to read
-        a book <span className="font-medium">every 6 month</span> and I delight
-        in good humoured discussions with family and friends.
+        <span className="italic">When I&apos;m not coding</span>, I enjoy
+        playing video games, watching movies, and playing with my dog. I also
+        enjoy <span className="font-medium">learning new things</span>. I try to
+        read a book <span className="font-medium">every 6 month</span> and I
+        delight in good humoured discussions with family and friends.
       </p>
     </motion.section>
   );
