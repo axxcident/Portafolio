@@ -1,19 +1,29 @@
-"use client";
-import { delay, motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { FaGithub, FaGithubSquare } from "react-icons/fa";
-import { HiDownload } from "react-icons/hi";
+'use client'
+import { useActiveSectionContext } from '@/context/active-section-context'
+import { delay, motion } from 'framer-motion'
+import Image from 'next/image'
+import Link from 'next/link'
+import React, { useEffect } from 'react'
+import { BsArrowRight, BsLinkedin } from 'react-icons/bs'
+import { FaGithub, FaGithubSquare } from 'react-icons/fa'
+import { HiDownload } from 'react-icons/hi'
+import { useInView } from 'react-intersection-observer'
 
 export default function intro() {
   // const { ref } = useSectionInView("Home", 0.5);
   // const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const { ref, inView } = useInView({ threshold: 0.5 })
+  const { setActiveState, timeOfLastClick } = useActiveSectionContext()
+
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
+      setActiveState('Home')
+    }
+  }, [inView, setActiveState, timeOfLastClick])
 
   return (
     <section
-      // ref={ref}
+      ref={ref}
       id="home"
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
@@ -23,8 +33,8 @@ export default function intro() {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              type: "tween",
-              duration: 0.2,
+              type: 'tween',
+              duration: 0.2
             }}
           >
             <Image
@@ -41,10 +51,10 @@ export default function intro() {
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
-                type: "spring",
+                type: 'spring',
                 stiffness: 125,
                 delay: 0.1,
-                duration: 0.7,
+                duration: 0.7
               }}
             >
               👋
@@ -58,17 +68,17 @@ export default function intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Axel.</span> I'm a{" "}
+        <span className="font-bold">Hello, I'm Axel.</span> I'm a{' '}
         <span className="font-bold">frontend developer</span> that aspires to
-        get some professional experience. I enjoy designing & building{" "}
-        <span className="italic">sites & apps</span>. My focus is{" "}
+        get some professional experience. I enjoy designing & building{' '}
+        <span className="italic">sites & apps</span>. My focus is{' '}
         <span className="underline">React</span> (Next.js).
       </motion.h1>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.1,
+          delay: 0.1
         }}
         className="flex flex-col sm:flex-row justify-center items-center gap-2 px-4 text-lg font-medium"
       >
@@ -106,5 +116,5 @@ export default function intro() {
         </a>
       </motion.div>
     </section>
-  );
+  )
 }

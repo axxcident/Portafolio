@@ -1,13 +1,25 @@
-import React from "react";
-import SectionHeading from "./section-heading";
-import { projectsData } from "@/lib/data";
-import Project from "./project";
+'use client'
+import React, { useEffect } from 'react'
+import SectionHeading from './section-heading'
+import { projectsData } from '@/lib/data'
+import Project from './project'
+import { useInView } from 'react-intersection-observer'
+import { useActiveSectionContext } from '@/context/active-section-context'
 
-type ProjectProps = (typeof projectsData)[number];
+// type ProjectProps = (typeof projectsData)[number];
 
 export default function Projects() {
+  const { ref, inView } = useInView({ threshold: 0.2 })
+  const { setActiveState, timeOfLastClick } = useActiveSectionContext()
+
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
+      setActiveState('Projects')
+    }
+  }, [inView, setActiveState, timeOfLastClick])
+
   return (
-    <section id="projects" className="scroll-mt-[7.3rem]">
+    <section id="projects" className="scroll-mt-[7.3rem]" ref={ref}>
       <SectionHeading>My projects</SectionHeading>
       <div>
         {projectsData.map((project, index) => (
@@ -17,7 +29,7 @@ export default function Projects() {
         ))}
       </div>
     </section>
-  );
+  )
 }
 
 // function Project({ title, description, tags, imageUrl }: ProjectProps) {
