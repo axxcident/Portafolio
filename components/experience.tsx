@@ -17,30 +17,86 @@ export default function Experience() {
 
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
-      <div className="flex flex-col space-y-4">
+      <SectionHeading>My experience</SectionHeading>
+      <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (
-          <div
-            key={index}
-            className={`group mb-3 sm:mb-8 last:mb-0 ${
-              index % 2 === 0 ? "" : "sm:ml-[19rem]"
-            }`}
-          >
-            <article className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-              <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full">
-                <h3 className="font-semibold capitalize">{item.title}</h3>
-                <span className="text-gray-500">{item.date}</span>
-                <p className="font-normal mt-2">{item.location}</p>
-                <p className="mt-1 font-normal text-gray-700">
-                  {item.description}
-                </p>
-              </div>
-            </article>
-          </div>
+          <React.Fragment key={index}>
+            <VerticalTimelineElement
+              visible={true}
+              contentStyle={{
+                // theme === "light"
+                background: false ? "#f3f4f6" : "#ffffffc",
+                boxShadow: "none",
+                border: "1px solid rgba(0, 0, 0, 0.05)",
+                textAlign: "left",
+                padding: "1.3rem 2rem",
+              }}
+              contentArrowStyle={{
+                borderRight: "7px solid  #000000c",
+              }}
+              date={item.date}
+              icon={item.icon}
+              iconStyle={{
+                // theme === "light"
+                background: false ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
+                fontSize: "1.5rem",
+              }}
+            >
+              <h3 className="font-semibold capitalize">{item.title}</h3>
+              <p className="font-normal !mt-0">{item.location}</p>
+              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+                {item.description}
+              </p>
+            </VerticalTimelineElement>
+          </React.Fragment>
         ))}
-      </div>
+      </VerticalTimeline>
     </section>
   );
 }
+// -----------------------------------------------------------------------------------------------------------
+// export default function Experience() {
+//   const { ref } = useSectionInView("Experience");
+//   // const { theme } = useTheme();
+
+//   return (
+//     <section
+//       id="experience"
+//       ref={ref}
+//       className="scroll-mt-28 mb-28 sm:mb-40 max-w-[60rem]"
+//     >
+//       <div className="flex flex-col space-y-4 group">
+//         {experiencesData.map((item, index) => (
+//           <div
+//             key={index}
+//             className={`mb-3 sm:mb-8 ${
+//               index % 2 === 0 ? "ml-[25rem]" : "mr-[25rem]"
+//             }`}
+//           >
+//             <article
+//               className={`${
+//                 index % 2 === 0 ? "flex justify-end" : ""
+//               } bg-gray-100 max-w-[25rem] border border-black/5 rounded-lg overflow-hidden relative sm:h-[16rem] hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20`}
+//             >
+//               <div
+//                 className={`pt-4 pb-8 px-5 ${
+//                   index % 2 === 0 ? "pl-8" : "pr-8"
+//                 } sm:pt-8 sm:max-w-[70%] flex flex-col h-full`}
+//               >
+//                 <h3 className="font-semibold capitalize">{item.title}</h3>
+//                 <span className="text-gray-500">{item.date}</span>
+//                 <p className="font-normal mt-2">{item.location}</p>
+//                 <p className="mt-1 font-normal text-gray-700">
+//                   {item.description}
+//                 </p>
+//               </div>
+//             </article>
+//           </div>
+//         ))}
+//       </div>
+//     </section>
+//   );
+// }
 // -----------------------------------------------------------------------------------------------------------
 // export default function Experience() {
 //   const { ref } = useSectionInView("Experience");
