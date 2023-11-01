@@ -9,11 +9,11 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-// import { useTheme } from "@/context/theme-context";
+import { useTheme } from "@/context/theme-context";
 
 export default function Experience() {
   const { ref } = useSectionInView("Experience");
-  // const { theme } = useTheme();
+  const { theme } = useTheme();
 
   // Härma skills animationen med att göra så rutorna flyger in en i taget?
 
@@ -26,22 +26,24 @@ export default function Experience() {
             <VerticalTimelineElement
               visible={true}
               contentStyle={{
-                // theme === "light"
-                background: false ? "#f3f4f6" : "#ffffff",
+                background:
+                  theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
                 boxShadow: "none",
                 border: "1px solid rgba(0, 0, 0, 0.05)",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
               }}
               contentArrowStyle={{
-                borderRight: "7px solid  #000000c",
+                borderRight:
+                  theme === "light"
+                    ? "0.4rem solid #9ca3af"
+                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
               }}
               date={item.date}
               icon={item.icon}
               iconStyle={{
-                // theme === "light"
-                // background: "#white",
-                background: true ? "#ffffff" : "rgba(255, 255, 255, 0.05)",
+                background:
+                  theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
                 fontSize: "1.5rem",
               }}
             >
