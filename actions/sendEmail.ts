@@ -1,34 +1,27 @@
 "use server";
 
 import React from "react";
-
-// KANSKE MÅSTE INSTALLERA "resend@0.16.0"
 import { Resend } from "resend";
 import { validateString, getErrorMessage } from "@/lib/utils";
 
 // import ContactFormEmail from "@/email/contact-form-email";
-// Eller
-import { renderToString } from 'react-dom/server';
-
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 // export const sendEmail = async (formData: FormData) => {
-//   const senderEmail  = formData.get("senderEmail");
-//   const senderMessage = formData.get("senderMessage");
+  //   const senderEmail  = formData.get("senderEmail");
+  //   const senderMessage = formData.get("senderMessage");
 
-//   console.log("senderEmail: ", senderEmail);
-//   console.log("senderMessage: ", senderMessage);
+  //   console.log("senderEmail: ", senderEmail);
+  //   console.log("senderMessage: ", senderMessage);
 
-//   resend.emails.send({
-//     from: 'onboarding@resend.dev',
-//     to: 'olivecrona.axel@gmail.com',
-//     subject: 'Hello World checking if true',
-//     html: '<p>Congrats on sending your <strong>100th email</strong>!</p>'
-//   });
+  //   resend.emails.send({
+    //     from: 'onboarding@resend.dev',
+    //     to: 'olivecrona.axel@gmail.com',
+    //     subject: 'Hello World checking if true',
+    //     html: '<p>Congrats on sending your <strong>100th email</strong>!</p>'
+    //   });
+    // };
 
-// };
-
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");

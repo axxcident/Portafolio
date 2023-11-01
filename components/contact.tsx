@@ -33,14 +33,11 @@ export default function Contact() {
         className="mt-10 flex flex-col"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
-          // await sendEmail(formData);
-
           if (error) {
             console.log("haha error");
             toast.error(error);
             return;
           }
-
           toast.success("Email sent successfully!");
         }}
       >
@@ -60,13 +57,6 @@ export default function Contact() {
           maxLength={500}
         />
         <SubmitBtn />
-        {/* <button
-          className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 active:scale-105 hover:bg-gray-950"
-          type="submit"
-        >
-          Send
-          <FaPaperPlane className="opacity-90 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
-        </button> */}
       </form>
     </motion.section>
   );
