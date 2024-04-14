@@ -2,8 +2,10 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import { IoCodeWorkingSharp } from "react-icons/io5";
 import tjuvgodsImg from "@/public/tjuvgods.jpg";
 import kwitterImg from "@/public/kwitter.png";
+import healtcheckinImg from "@/public/healthcheckin.png";
 import mjTrainingCampImg from "@/public/MJtraingingcamp.png";
 import gomokuGurusImg from "@/public/GomokuGurus.png";
 import atomcollaborationImg from "@/public/atomcollaboration.jpg";
@@ -45,12 +47,20 @@ export const experiencesData = [
     date: "2022-2024",
   },
   {
-    title: "Front-End Developer & Designer",
+    title: "Internship Front-End Developer & Designer",
     location: "Atom Collaboration, Stockholm, Sweden",
     description:
       "I had an internship at Atom Collaboration where I worked as a front-end developer and designer. I primarly worked with Figma. I also upskilled in Flutter and backend development.",
     icon: React.createElement(CgWorkAlt),
     date: "Autumn 2023",
+  },
+  {
+    title: "Internship Front-End Developer",
+    location: "Bontouch (Framna), Stockholm, Sweden",
+    description:
+      "I had an internship at Bontouch (currently called Framna) where I was given a project of my own to develop a web application. This web application was called 'health check-in' and was used by the employees at the company to check in on their health status (happiness, productivity and stress) by team and across time. Built using Next.js and React, TypeScript, Tailwind and uploaded via Vercel.",
+    icon: React.createElement(IoCodeWorkingSharp),
+    date: "Spring 2024",
   },
   {
     title: "Front-End Developer",
@@ -63,6 +73,13 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: "Health Check-in",
+    description:
+      "Internship project at Bontouch (Framna) where I developed a web application for employees to check in on their work health status. Built using Next.js, React, TypeScript, Tailwind and uploaded via Vercel.",
+    tags: ["Next.js", "Typescript", "Tailwind", "Auth0", "PostgreSQL"],
+    imageUrl: healtcheckinImg,
+  },
   {
     title: "Tjuvgods",
     description:
