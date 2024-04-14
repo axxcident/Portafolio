@@ -5,7 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import { IoCodeWorkingSharp } from "react-icons/io5";
 import tjuvgodsImg from "@/public/tjuvgods.jpg";
 import kwitterImg from "@/public/kwitter.png";
-import healtcheckinImg from "@/public/healthcheckin.png";
+import healtcheckinImg from "@/public/HealthCheckIn.png";
 import mjTrainingCampImg from "@/public/MJtraingingcamp.png";
 import gomokuGurusImg from "@/public/GomokuGurus.png";
 import atomcollaborationImg from "@/public/atomcollaboration.jpg";
