@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { projectsData } from "@/lib/data";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -11,6 +12,7 @@ export default function Project({
   description,
   tags,
   imageUrl,
+  projectLink,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -44,11 +46,20 @@ export default function Project({
                 {tag}
               </li>
             ))}
+            <li className="dark:bg-black/[0.7] dark:text-white bg-white text-black px-3 py-1 text-[0.7rem] cursor-pointer uppercase tracking-wider rounded-full transition duration-300 transform hover:scale-110 shadow-custom-light dark:shadow-custom-dark hover:shadow-lg focus:scale-105 focus:shadow-md">
+              <Link
+                href={projectLink}
+                className="capitalize"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Link
+              </Link>
+            </li>
           </ul>
         </div>
 
         <Image
-          // Fixa bilderna så att de passar bättre
           src={imageUrl}
           alt="Project I worked on"
           quality={95}

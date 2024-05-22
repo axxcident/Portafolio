@@ -9,6 +9,7 @@ import healtcheckinImg from "@/public/HealthCheckIn.png";
 import mjTrainingCampImg from "@/public/MJtraingingcamp.png";
 import gomokuGurusImg from "@/public/GomokuGurus.png";
 import atomcollaborationImg from "@/public/atomcollaboration.jpg";
+import weatherAppImg from "@/public/weatherApp.jpg";
 
 export const links = [
   {
@@ -79,6 +80,7 @@ export const projectsData = [
       "Internship project at Bontouch (Framna) where I developed a web application for employees to check in on their work health status. Built using Next.js, React, TypeScript, Tailwind and uploaded via Vercel.",
     tags: ["Next.js", "Typescript", "Tailwind", "Auth0", "PostgreSQL"],
     imageUrl: healtcheckinImg,
+    projectLink: "https://health-check-kappa.vercel.app/",
   },
   {
     title: "Tjuvgods",
@@ -86,20 +88,31 @@ export const projectsData = [
       "School project on a retail mockup store. I created backend and frontend functions, components & parts of design.",
     tags: ["Vue.js", "Javascript", "Bootstrap", "Vuex", "Node.js"],
     imageUrl: tjuvgodsImg,
+    projectLink: "https://axxcident.github.io/Tjuvgods/",
   },
   {
     title: "Kwitter",
     description:
       "School project on a mockup version of Twitter. I created pages, components, functions, the backend functionality & parts of the design.",
-    tags: ["React", "Javascript", "PostgreSQL", "Node.js"],
+    tags: ["React", "Javascript", "PostgreSQL", "Node.js", "Express.js"],
     imageUrl: kwitterImg,
+    projectLink: "https://github.com/axxcident/Kwitter",
   },
   {
     title: "Gomoku Gurus",
     description:
       "School project on an online Gomoku game. I created pages, components, functions, the backend functionality & parts of the design.",
-    tags: ["React", "Javascript", "Firebase"],
+    tags: ["React", "Javascript", "Firebase", "Jest"],
     imageUrl: gomokuGurusImg,
+    projectLink: "https://github.com/axxcident/gomoku-gurus",
+  },
+  {
+    title: "Weather App",
+    description:
+      "Side project from online course.",
+    tags: ["Vue", "Javascript", "Tailwind"],
+    imageUrl: weatherAppImg,
+    projectLink: "https://axxcident.github.io/SMHI_app/",
   },
   {
     title: "MJ training camp",
@@ -107,6 +120,7 @@ export const projectsData = [
       "Small project to customer who needed a travel & training static website",
     tags: ["Vue.js", "Javascript"],
     imageUrl: mjTrainingCampImg,
+    projectLink: "https://axxcident.github.io/MJtrainingcamps/",
   },
   {
     title: "Atom Collaboration",
@@ -114,6 +128,7 @@ export const projectsData = [
       "Ongoing project with creating a website for a customer that delivers learning plattforms for organizations",
     tags: ["Figma",],
     imageUrl: atomcollaborationImg,
+    projectLink: "https://www.figma.com/design/ks1i7GehwdsLOt6X7wxNNI/Atom-webpage?node-id=0%3A1&t=8kCICQ8e2Hca1S3P-1/",
   },
 ] as const;
 
