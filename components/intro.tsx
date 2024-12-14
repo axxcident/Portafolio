@@ -56,11 +56,11 @@ export default function Intro() {
       </div>
       {/* h1 eller paragraf */}
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-3xl"
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-3xl text-justify"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Axel.</span> I&apos;m a{" "}
+        Hello, <span className="font-bold">I&apos;m Axel.</span> I&apos;m a{" "}
         <span className="font-bold">frontend developer</span> that works at Aptoma AS. My day to day work involves plain old javascript, css and html but I enjoy designing & building{" "}
         <span className="italic">hobby sites</span> in my spare time. This porfolio site was built using{" "}
         <span className="underline">React</span> & Next.js.

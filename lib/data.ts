@@ -9,6 +9,7 @@ import mjTrainingCampImg from "@/public/MJtraingingcamp.png";
 import gomokuGurusImg from "@/public/GomokuGurus.png";
 import atomcollaborationImg from "@/public/atomcollaboration.jpg";
 import weatherAppImg from "@/public/weatherApp.jpg";
+import whiteHouseImg from "@/public/whiteHouse.png";
 import AptomaIcon from "./aptomaIcon";
 
 export const links = [
@@ -75,9 +76,17 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Vita huset Bokningssystem",
+    description:
+      "Booking system for the family's vacation house. Mobile-first and serverless.",
+    tags: ["Nuxt.js", "Vue.js", "Typescript", "Tailwind", "PostgreSQL"],
+    imageUrl: whiteHouseImg,
+    projectLink: "https://vitahuset-olivecrowns-projects.vercel.app/",
+  },
+  {
     title: "Health Check-in",
     description:
-      "Internship project at Bontouch (Framna) where I developed a web application for employees to check in on their work health status. Built using Next.js, React, TypeScript, Tailwind and uploaded via Vercel.",
+      "Internship project at Bontouch (Framna) where I developed a web application for employees to check in on their work health status.",
     tags: ["Next.js", "Typescript", "Tailwind", "Auth0", "PostgreSQL"],
     imageUrl: healtcheckinImg,
     projectLink: "https://health-check-kappa.vercel.app/",
@@ -140,6 +149,7 @@ export const skillsData = [
   "React",
   "Vue.js",
   "Next.js",
+  "Nuxt.js",
   "Node.js",
   "Express.js",
   "Jest",
