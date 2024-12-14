@@ -1,6 +1,5 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import { IoCodeWorkingSharp } from "react-icons/io5";
 import tjuvgodsImg from "@/public/tjuvgods.jpg";
@@ -10,6 +9,7 @@ import mjTrainingCampImg from "@/public/MJtraingingcamp.png";
 import gomokuGurusImg from "@/public/GomokuGurus.png";
 import atomcollaborationImg from "@/public/atomcollaboration.jpg";
 import weatherAppImg from "@/public/weatherApp.jpg";
+import AptomaIcon from "./aptomaIcon";
 
 export const links = [
   {
@@ -40,20 +40,12 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated ITHS",
-    location: "Higher Vocational Studies, Stockholm, Sweden",
+    title: "Front-End Developer",
+    location: "Aptoma AS",
     description:
-      "I completed my 2-year program and successfully graduated, and I'm now actively searching for opportunities as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2022-2024",
-  },
-  {
-    title: "Internship Front-End Developer & Designer",
-    location: "Atom Collaboration, Stockholm, Sweden",
-    description:
-      "I had an internship at Atom Collaboration where I worked as a front-end developer and designer. I primarly worked with Figma. I also upskilled in Flutter and backend development.",
-    icon: React.createElement(CgWorkAlt),
-    date: "Autumn 2023",
+      "Working as a junior software engineer. Most tasks involve front-end development. The plattform I work on is Layoutpreview, DrEdition and ancillary customer repositories",
+    icon: React.createElement(AptomaIcon),
+    date: "2024 - present",
   },
   {
     title: "Internship Front-End Developer",
@@ -64,13 +56,21 @@ export const experiencesData = [
     date: "Spring 2024",
   },
   {
-    title: "Front-End Developer",
-    location: "Company.com",
+    title: "Internship Front-End Developer & Designer",
+    location: "Atom Collaboration, Stockholm, Sweden",
     description:
-      "I'm now a front-end developer who aspires to get some profesional experience. My stack includes React, Next.js, Vue.js, TypeScript, Tailwind, PostgreSQL and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2024 - present",
+      "I had an internship at Atom Collaboration where I worked as a front-end developer and designer. I primarly worked with Figma. I also upskilled in Flutter and backend development.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Autumn 2023",
   },
+  {
+    title: "Frontend development studies",
+    location: "ITHS",
+    description:
+      "Higher Vocational Studies, Stockholm, Sweden. I studied a 2-year program and graduated summer 2024.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2022-2024",
+  }
 ] as const;
 
 export const projectsData = [
