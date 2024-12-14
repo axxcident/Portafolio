@@ -17,7 +17,7 @@ const About = () => {
       ref={ref}
     >
       <SectionHeading>About me</SectionHeading>
-      <p className="mb-3">
+      <p className="mb-3 text-justify">
         I graduated with a degree in{" "}
         <span className="font-medium">Economics and Political Science</span>,
         After that, I decided to pursue my passion for programming. I enrolled
@@ -29,19 +29,16 @@ const About = () => {
         feeling of finally figuring out a solution to a problem. My core
         technologies include{" "}
         <span className="font-medium">
-          React, Next.js, Vue.js, Node.js, MongoDB and PostgreSQL{" "}
+          Javascript, React and Vue.{" "}
         </span>
-        I am also familiar with TypeScript, Java, and Python. I am always
-        looking to learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a frontend
-        developer.
+        But I&apos;m also familiar with TypeScript, Java, and Python. I&apos;m always
+        looking to learn new technologies and challenges. If you&apos;re looking to build your own website and want a<span className="font-medium"> custom tailor-made feel to it</span>, connect with me and let&apos;s build something <span className="italic">Great</span> together{" "}
       </p>
       <p>
         <span className="italic">When I&apos;m not coding</span>, I enjoy
-        playing video games, watching movies, and playing with my dog. I also
-        enjoy <span className="font-medium">learning new things</span>. I try to
-        read a book <span className="font-medium">every 6 month</span> and I
-        delight in good humoured discussions with family and friends.
+        playing video games, watching movies, and walking with my dog. I
+        enjoy learning new things and I try to
+        read as much as possible. Let me know if you have any book recommendations! Send an  <span className="font-medium">email</span> below ✉️
       </p>
     </motion.section>
   );
