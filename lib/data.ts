@@ -1,7 +1,5 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
-import { IoCodeWorkingSharp } from "react-icons/io5";
 import tjuvgodsImg from "@/public/tjuvgods.jpg";
 import kwitterImg from "@/public/kwitter.png";
 import healtcheckinImg from "@/public/HealthCheckIn.png";
@@ -61,7 +59,7 @@ export const experiencesData = [
     location: "Atom Collaboration, Stockholm, Sweden",
     description:
       "I had an internship at Atom Collaboration where I worked as a front-end developer and designer. I primarly worked with Figma. I also upskilled in Flutter and backend development.",
-    icon: React.createElement(CgWorkAlt),
+    icon: React.createElement(CompanyIcon, { company: 'atomic_collab' }),
     date: "Autumn 2023",
   },
   {
