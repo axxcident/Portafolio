@@ -7,9 +7,9 @@ import kwitterImg from "@/public/kwitter.png";
 import healtcheckinImg from "@/public/HealthCheckIn.png";
 import mjTrainingCampImg from "@/public/MJtraingingcamp.png";
 import gomokuGurusImg from "@/public/GomokuGurus.png";
-import atomcollaborationImg from "@/public/atomcollaboration.jpg";
 import weatherAppImg from "@/public/weatherApp.jpg";
 import whiteHouseImg from "@/public/whiteHouse.png";
+import schoolPortfolioImg from "@/public/schoolPortfolio.png";
 import AptomaIcon from "./aptomaIcon";
 
 export const links = [
@@ -132,13 +132,13 @@ export const projectsData = [
     projectLink: "https://axxcident.github.io/MJtrainingcamps/",
   },
   {
-    title: "Atom Collaboration",
+    title: "School Portfolio",
     description:
-      "Ongoing project with creating a website for a customer that delivers learning plattforms for organizations",
-    tags: ["Figma",],
-    imageUrl: atomcollaborationImg,
-    projectLink: "https://www.figma.com/design/ks1i7GehwdsLOt6X7wxNNI/Atom-webpage?node-id=0%3A1&t=8kCICQ8e2Hca1S3P-1/",
-  },
+      "SSG Portfolio with Gatsby, Contentful and GraphQL, Detailing my courses and grades.",
+    tags: ["Gatsby", "React", "Javascript", "Contentful", "GraphQL"],
+    imageUrl: schoolPortfolioImg,
+    projectLink: "https://axxcident-portfolio.netlify.app/portfolio/",
+  }
 ] as const;
 
 export const skillsData = [
