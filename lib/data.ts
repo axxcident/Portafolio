@@ -10,7 +10,7 @@ import gomokuGurusImg from "@/public/GomokuGurus.png";
 import weatherAppImg from "@/public/weatherApp.jpg";
 import whiteHouseImg from "@/public/whiteHouse.png";
 import schoolPortfolioImg from "@/public/SchoolPortfolio.png";
-import AptomaIcon from "./aptomaIcon";
+import CompanyIcon from "@/components/companyIcon";
 
 export const links = [
   {
@@ -45,7 +45,7 @@ export const experiencesData = [
     location: "Aptoma AS",
     description:
       "Working as a junior software engineer. Most tasks involve front-end development. The plattform I work on is Layoutpreview, DrEdition and ancillary customer repositories",
-    icon: React.createElement(AptomaIcon),
+    icon: React.createElement(CompanyIcon, { company: 'aptoma' }),
     date: "2024 - present",
   },
   {
@@ -53,7 +53,7 @@ export const experiencesData = [
     location: "Bontouch (Framna), Stockholm, Sweden",
     description:
       "I had an internship at Bontouch (currently called Framna) where I was given a project of my own to develop a web application. This web application was called 'health check-in' and was used by the employees at the company to check in on their health status (happiness, productivity and stress) by team and across time. Built using Next.js and React, TypeScript, Tailwind and uploaded via Vercel.",
-    icon: React.createElement(IoCodeWorkingSharp),
+    icon: React.createElement(CompanyIcon, { company: 'bontouch' }),
     date: "Spring 2024",
   },
   {
