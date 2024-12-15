@@ -67,7 +67,7 @@ export const experiencesData = [
     location: "ITHS",
     description:
       "Higher Vocational Studies, Stockholm, Sweden. I studied a 2-year program and graduated summer 2024.",
-    icon: React.createElement(LuGraduationCap),
+    icon: React.createElement(CompanyIcon, { company: 'iths' }),
     date: "2022-2024",
   }
 ] as const;

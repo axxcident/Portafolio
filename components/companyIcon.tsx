@@ -3,8 +3,9 @@ import Image from 'next/image';
 import aptomaIcon from '@/public/aptoma_icon.svg';
 import bontouchSvgIcon from '@/public/Bontouch_icon.svg';
 import atomic_collab from '@/public/Atomic_Collaboration.svg'
+import ithsIcon from '@/public/ITHS.svg';
 
-type CompanyName = 'aptoma' | 'bontouch' | 'atomic_collab';
+type CompanyName = 'aptoma' | 'bontouch' | 'atomic_collab' | 'iths';
 
 interface CompanyIconProps {
   company: CompanyName;
@@ -16,6 +17,7 @@ const iconMap = {
   aptoma: aptomaIcon,
   bontouch: bontouchSvgIcon,
   atomic_collab: atomic_collab,
+  iths: ithsIcon,
 } as const;
 
 const CompanyIcon: React.FC<CompanyIconProps> = ({ company, size = 24 }) => (
